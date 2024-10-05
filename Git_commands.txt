@@ -113,8 +113,32 @@ When some large file push than
 •	For example, move it to D:\Downloads.
 5. java -jar D:\Downloads\bfg-1.13.0.jar --strip-blobs-bigger-than 100M
 6. git reflog expire --expire=now --all
-git gc --prune=now –aggressive
+git gc --prune=now –-aggressive
 7. git push --force
 
 
 
+
+
+Here’s how you can use Git LFS to track and push large files:
+
+Install Git LFS: You can download Git LFS from https://git-lfs.github.com/ and install it on your system.
+
+Initialize Git LFS: Run the following command in your repository:
+
+Step1:-git lfs install
+
+Track the Large File: Add the large file type (e.g., PDF) to Git LFS:
+
+Step2:-git lfs track fullFilePath
+
+Alternatively, you can track specific files by providing their paths.
+Add and Commit Changes: After tracking the file, commit the changes:
+
+Step3:-git add .gitattributes
+Step3:-git add placement_data/DBMS/Notes/DBMS_Full_Notes.pdf
+Step3:-git commit -m "Track large file with Git LFS"
+
+Push Changes to GitHub: Now you can push the changes to GitHub as usual:
+
+Step4:-git push origin main
