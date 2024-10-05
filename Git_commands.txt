@@ -134,11 +134,13 @@ When some large file push than
 2.download this:- https://repo1.maven.org/maven2/com/madgag/bfg/1.13.0/bfg-1.13.0.jar
 3.go to your git repository:- eg: cd D:\Study\Du_Mca
 4. Move the JAR file to an accessible location:
-•	For example, move it to D:\Downloads.
+•	For example, move it to D:\Downloads.or the folder from where you want to remove large file 
 5. java -jar D:\Downloads\bfg-1.13.0.jar --strip-blobs-bigger-than 100M
-6. git reflog expire --expire=now --all
-git gc --prune=now –-aggressive
-7. git push --force
+So to remove large file do these steps after download the jar file
+step1:-java -jar bfg-1.13.0.jar --delete-files "QUANTITATIVE APTITUDE.pdf"
+step2:-git reflog expire --expire=now --all
+step3:-git gc --prune=now –-aggressive
+step4:-git push --force
 
 
 
