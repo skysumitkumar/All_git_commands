@@ -175,8 +175,22 @@ Add and Commit Changes: After tracking the file, commit the changes:
 
 Step3:-git add .gitattributes
 Step3:-git add placement_data/DBMS/Notes/DBMS_Full_Notes.pdf
+
 Step3:-git commit -m "Track large file with Git LFS"
 
 Push Changes to GitHub: Now you can push the changes to GitHub as usual:
 
 Step4:-git push origin main
+
+
+
+
+
+
+
+Download Specific folder from repository
+git clone --depth 1 --filter=blob:none --sparse https://github.com/your-username/your-repo.git
+cd your-repo
+git sparse-checkout init --cone
+git sparse-checkout set folder_name
+git pull origin main
