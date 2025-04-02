@@ -189,8 +189,17 @@ Step4:-git push origin main
 
 
 Download Specific folder from repository
-git clone --depth 1 --filter=blob:none --sparse https://github.com/your-username/your-repo.git
-cd your-repo
-git sparse-checkout init --cone
-git sparse-checkout set folder_name
-git pull origin main
+1.git clone --depth 1 --filter=blob:none --sparse https://github.com/your-username/your-repo.git
+2.cd your-repo
+3.git sparse-checkout init --cone
+4.git sparse-checkout set folder_name
+5.git pull origin main
+
+
+Make tag to specific commit
+1.git log --oneline
+2.git tag -a v1.0 3f4a2b1 -m "Tagging version 1.0 at commit 3f4a2b1"
+3.git push origin v1.0
+4.git tag
+5.git show v1.0
+
