@@ -203,3 +203,29 @@ Make tag to specific commit
 4.git tag
 5.git show v1.0
 
+
+
+Branchig
+
+git branch <branch-name>             # Create a new branch
+git checkout -b <branch-name>        # Create and switch to a new branch
+git switch -c <branch-name>          # Same as above (newer Git versions)
+git checkout <branch-name>           # Switch to an existing branch
+git switch <branch-name>             # Preferred alternative
+git branch                           # List local branches
+git branch -r                        # List remote branches
+git branch -a                        # List all branches (local + remote)
+git branch -d <branch-name>          # Delete local branch (safe, only if merged)
+git branch -D <branch-name>          # Force delete local branch
+git push origin --delete <branch>   # Delete remote branch
+git merge <branch-name>              # Merge the specified branch into the current one
+git rebase <branch-name>             # Rebase current branch onto another
+git push origin <branch-name>        # Push local branch to remote
+git pull origin <branch-name>        # Pull latest changes from a remote branch
+git checkout --track origin/<branch-name>  # Create a local branch that tracks a remote one
+git branch --merged                  # Branches already merged into current
+git branch --no-merged               # Branches not yet merged
+git branch -m <new-name>             # Rename current branch
+git branch -m <old-name> <new-name>  # Rename specific branch
+
+
