@@ -85,27 +85,20 @@ git branch -M main
 git push -u origin main
 
 
-
-
-
-
-
-
-
-git rm --cached filename:-to remove the file 
 First time push data to github
-git config --global user.name "skysumitkumar"
-git config --global user.email sky3081999@gmail.com
-git remote orign 
-git init
-git add .
-git commit -m "image_gallery"
+git config --global user.name "xxxxxx"
+git config --global user.email xxxxxx@gmail.com
 git remote add origin https:///github.com/username/
 git branch -m main
-git push -u origin main
+git remote orign 
 git fetch origin
 git pull origin main
 git pull origin main --allow-unrelated-histories
+git init
+git add FileORFolderName(that you want to add)
+git commit -m "image_gallery"
+git push -u origin main(branch name)
+git rm --cached filename:-to remove the file 
 Step-by-step Vim Instructions
 1.	If you are editing the commit message:
 o	Make your changes.
@@ -118,25 +111,6 @@ o
 git add .\README.md
 git commit -m "image_gallery"
 git push origin main
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -228,4 +202,16 @@ git branch --no-merged               # Branches not yet merged
 git branch -m <new-name>             # Rename current branch
 git branch -m <old-name> <new-name>  # Rename specific branch
 
+if we want to use two accounts on one device
+
+download
+https://cli.github.com/
+
+gh auth logout
+gh auth login
+then choose github.com->HTTPS->Login with browser->Enter
+when you Enter you get code in terminal 
+login to the browser that show after click on Enter
+than paste code that you see in the terminal
+now you can access that account on your device
 
