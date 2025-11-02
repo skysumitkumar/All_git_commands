@@ -189,9 +189,12 @@ git switch <branch-name>             # Preferred alternative
 git branch                           # List local branches
 git branch -r                        # List remote branches
 git branch -a                        # List all branches (local + remote)
+
+# if you are currently that branch that you want to delete so firstly switch to diff branch
 git branch -d <branch-name>          # Delete local branch (safe, only if merged)
 git branch -D <branch-name>          # Force delete local branch
-git push origin --delete <branch>   # Delete remote branch
+git push origin --delete <branch-name>   # Delete remote branch
+
 git merge <branch-name>              # Merge the specified branch into the current one
 git rebase <branch-name>             # Rebase current branch onto another
 git push origin <branch-name>        # Push local branch to remote
