@@ -202,6 +202,13 @@ git branch -d <branch-name>          # Delete local branch (safe, only if merged
 git branch -D <branch-name>          # Force delete local branch
 git push origin --delete <branch-name>   # Delete remote branch
 
+# To merge a branch for example sumit -> into main
+git switch main						# Firstly switch to the main branch
+git pull origin main				# Make sure main is updated
+git merge sumit						# Merge the branch into main
+git commit -m "sumit branch merged"
+git push origin main				# Push changes to git
+
 git merge <branch-name>              # Merge the specified branch into the current one
 git rebase <branch-name>             # Rebase current branch onto another
 git push origin <branch-name>        # Push local branch to remote
