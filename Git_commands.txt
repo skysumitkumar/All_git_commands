@@ -190,6 +190,13 @@ git branch                           # List local branches
 git branch -r                        # List remote branches
 git branch -a                        # List all branches (local + remote)
 
+# if you are currently on main branch and locally no other branch exist ans you want to switch to diff branch that exist on remote
+git branch -r                        # To see remote branches
+#output:- origin/HEAD -> origin/main 
+		  origin/main 
+		  origin/sumit
+git switch -c sumit origin/sumit     # To switch to the sumit branch locally
+
 # if you are currently that branch that you want to delete so firstly switch to diff branch
 git branch -d <branch-name>          # Delete local branch (safe, only if merged)
 git branch -D <branch-name>          # Force delete local branch
