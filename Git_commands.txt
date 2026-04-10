@@ -105,14 +105,83 @@ o	Make your changes.
 o	Press Esc to switch to command mode.
 o	Type :wq and press Enter.
 2.	If you are keeping the default message:
-o	Press Esc to switch to command mode.
-o	
+o	Press Esc to switch to command mode.	
 
 git add .\README.md
 git commit -m "image_gallery"
 git push origin main
 
+1. Always start from latest main
+	git checkout main
+	git pull origin main
+	Note:- This ensures your branch starts from updated code
+2. Create a feature branch (NEVER work on main)
+	git checkout -b feature/login-system
+3. Work in SMALL commits
+	git add .
+	git commit -m "Add login API"
+	Note:- Small commits = easy merge = fewer conflicts
+4. Push branch regularly
+	git push origin feature/login-system
+5. Keep syncing with main (VERY IMPORTANT)
+	git checkout main
+	git pull origin main
+	git checkout feature/login-system
+	git merge main
+	Note:- This prevents BIG surprise conflicts later
+6. BEFORE merging, check clean status
+	git status
+	Note:- Must show: nothing to commit, working tree clean
+7. Merge into main (SAFE WAY)
+	Option A (BEST for teams) → Pull Request
 
+	Use GitHub:
+
+	Push branch
+	Open PR:
+	base: main
+	compare: feature/login-system
+	Review → Merge
+
+	✔️ safest
+	✔️ no direct main risk
+	✔️ CI checks
+
+	Option B (local merge)
+
+	git checkout main
+	git merge feature/login-system
+	git push origin main
+8. Handling conflicts (if they happen)
+	If conflict occurs:
+		git status
+	Then open files and fix manually OR:
+	Accept your branch:
+		git checkout --theirs .
+	OR accept main:
+		git checkout --ours .
+	Then:
+		git add .
+		git commit
+9. AFTER merge → delete branch
+	git branch -d feature/login-system
+	git push origin --delete feature/login-system
+
+Note:- GOLDEN RULES (VERY IMPORTANT)
+		🟢 Rule 1: Never work on main
+					Always use feature branches
+
+		🟢 Rule 2: Merge small changes often
+					Don’t wait weeks like you did
+
+		🟢 Rule 3: Avoid huge renames in one commit
+					Instead:
+							✔ Step 1: rename folder
+							✔ Step 2: move files
+							✔ Step 3: code changes
+
+		🟢 Rule 4: Sync frequently
+					git merge main
 
 
 When some large file push than
